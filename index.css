@@ -1,0 +1,14 @@
+.fuente{
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.menu{
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+    list-style-type: none;  
+}
+
+.menu li{
+    margin-top: 40px;
+}
