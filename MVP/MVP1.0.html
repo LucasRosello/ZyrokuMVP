@@ -12,11 +12,11 @@
                 font-size: 17px;
                 left: 0;
                 position: fixed;
-                right: 0;
-                top: 0;
+                width:100%;
                 height: 70px;
                 line-height: 65px;
                 font-family: 'Open Sans';
+                z-index:500;
             }
 
             .header a, .header a:hover{
@@ -30,6 +30,24 @@
             .header a:hover{
                 color: #3ea983;
             }
+
+            .logo{
+                display: inline;
+                left:0;
+            }
+
+            .main{
+                margin-top:70px;
+            }
+
+            .cardDerecha{
+                padding:40px;
+                margin-top:30px
+            }
+
+            .card{
+                border-radius: 7px;
+            }
         </style>
     </head>
     <body>
@@ -42,7 +60,55 @@
                             <a href="">Foro</a>
                             <a>Estadisticas</a>
                             <a>Mi perfil</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row main">
+                <div class="col-7">
+                    <a href="https://medium.com/@ger86/novedades-de-php-7-3-9f603f4885e0" >
+                        <div class="card" style="margin-top: 30px; padding:15px;">
+                            <img class="card-img-top" src="assets/img/1*iWS1FXC2s98r37HTQRayFw.png" alt="Card image cap" style="border-radius:5px; max-height: 200px; width: auto;  display: block; object-fit: cover; height: 100%;">
+                            <div class="card-body">
+                                <h5 class="card-title">Novedades de PHP 7.3</h5>
+                                <p class="card-text">Hoy mientras comía me he visto esta charla de Rasmus Lerdorf (el creador de
+                                    PHP)…</p>
+                                
+                                    <blockquote class="blockquote mb-0">
+                                        <footer class="blockquote-footer">Keith Adams <cite title="Source Title">Oct 12, 2016</cite></footer>
+                                      </blockquote>
+                                
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                             </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-5">
+                    <div class="card cardDerecha">
+                        <h4 class="center" style="color: #3ea983; font-weight: 300;">Misiones</h1>
+                        <img src="assets/img/graph.png" alt="" style="object-fit: cover; width:100%">
+                    </div>
+                    <div class="card cardDerecha">
+                        <h4 class="center" style="color: #3ea983; font-weight: 300;">Tus Estadisticas</h1>
+                        <img src="assets/img/graph.png" alt="" style="object-fit: cover; width:100%">
+                    </div>
+                    <div class="card cardDerecha">
+                        <h4 class="center" style="color: #3ea983; font-weight: 300;">Liga</h1>
+                        <img src="assets/img/graph.png" alt="" style="object-fit: cover; width:100%">
+                    </div>
+                    <div class="card cardDerecha">
+                        <h4 class="center" style="color: #3ea983; font-weight: 300;">Tus Estadisticas</h1>
+                        <img src="assets/img/graph.png" alt="" style="object-fit: cover; width:100%">
+                    </div>
+                    <div class="card cardDerecha">
+                        <h4 class="center" style="color: #3ea983; font-weight: 300;">Tus Estadisticas</h1>
+                        <img src="assets/img/graph.png" alt="" style="object-fit: cover; width:100%">
+                    </div>
+
+                    <div class="card cardDerecha">
+                        <h4 class="center" style="color: #3ea983; font-weight: 300;">Tus Estadisticas</h1>
+                        <img src="assets/img/graph.png" alt="" style="object-fit: cover; width:100%">
                     </div>
                 </div>
             </div>
