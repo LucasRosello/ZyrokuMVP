@@ -1,10 +1,36 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/icons/css/fontello.css">
         <style>
+            /*
+            Reglas responsivas
+            */
+            @media (max-width: 767px)
+            {
+                .desktop
+                {
+                    display: none;
+                } 
+            }
+
+            @media (min-width: 767px)
+            {
+                .mobile
+                {
+                    /*Mobile incluye tablet*/
+                    display: none;
+                }
+            }
+
+            /*
+            PONER TITULO
+            */
+
             .header{
                 background-color: #fff;
                 border-bottom: 2px solid #e5e5e5;
@@ -36,7 +62,7 @@
                 left:0;
             }
 
-            .main{
+            .mt-70{
                 margin-top:70px;
             }
 
@@ -48,11 +74,61 @@
             .card{
                 border-radius: 7px;
             }
+
+            /*
+            Mobile
+            */
+
+            .menuMobile{
+                background-color: #fff;
+                overflow: hidden;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 10vh;
+                border-top: 2px solid #e5e5e5;
+                z-index:500;
+            }
+
+            .menuMobile a {
+                float: left;
+                display: block;
+                color: #afa7a7;
+                
+                width:25%;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                line-height: 6vh;
+            }
+
+            .icon{
+                text-align: center;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-weight: normal;
+                content: attr(data-av_icon);
+                speak: none;
+                font-size: 40px;
+                margin: auto;
+            }
+
+            .iconSeleccionado{
+                color: #3ea983 !important;
+            }
         </style>
     </head>
     <body>
+        <div class="container-fluid">
+            <div class="row menuMobile d-block d-md-none">
+                <a href="#"><i class="icon iconSeleccionado icon-home"></i></a>
+                <a href="estadisticas.html"><i class="icon icon-chart-bar"></i></a>
+                <a href="#"><i class="icon icon-ok-circled"></i></a>
+                <a href="#"><i class="icon icon-user"></i></a>
+            </div>
+        </div>
         <div class="container">
-            <div class="row">
+            <div class="row desktop">
                 <div class="col">
                     <div class="header">
                         <div class="container">
@@ -108,7 +184,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-5">
+                <div class="col-5 desktop">
                     <div class="card cardDerecha">
                         <h4 class="center" style="color: #3ea983; font-weight: 300;">Misiones</h1>
                         <img src="assets/img/graph.png" alt="" style="object-fit: cover; width:100%">
