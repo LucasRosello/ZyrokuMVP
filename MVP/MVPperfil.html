@@ -12,37 +12,18 @@
             */
             @media (max-width: 767px)
             {
-                /* Estilos Mobile */
-                /* Mobile incluye tablet */
-
-                .mobile{
-                    display:block;
-                }
-
                 .desktop
                 {
                     display: none;
-                }
-
-                /*
-                Stats mobile
-                */
-                    
-                .mainCard{
-                    margin-top:10vh;
-                }
+                } 
             }
 
             @media (min-width: 767px)
             {
-                .desktop{
-                    display:block;
-                }
-
                 .mobile
                 {
-                
-                display: none;
+                    /*Mobile incluye tablet*/
+                    display: none;
                 }
             }
 
@@ -141,16 +122,13 @@
             .iconSeleccionado{
                 color: #3ea983 !important;
             }
-
-
-
         </style>
     </head>
-    <body style="background: linear-gradient(#3ea983 35%, rgba(0, 0, 0, 0) 25%), url('planets.jpg'); background-repeat: no-repeat, no-repeat, no-repeat;">
+    <body>
         <div class="container-fluid">
             <div class="row menuMobile d-block d-md-none">
-                <a href="MVP1.0.html"><i class="icon icon-home"></i></a>
-                <a href="#"><i class="icon iconSeleccionado icon-chart-bar"></i></a>
+                <a href="#"><i class="icon iconSeleccionado icon-home"></i></a>
+                <a href="estadisticas.html"><i class="icon icon-chart-bar"></i></a>
                 <a href="#"><i class="icon icon-ok-circled"></i></a>
                 <a href="#"><i class="icon icon-user"></i></a>
             </div>
@@ -171,42 +149,7 @@
                 </div>
             </div>
             <div class="mt-70 desktop"></div>
-            <!-- Contenido -->
-            <!-- <a style="color:#707070; margin-top:50px; display: block;" href="./video.html">
-                <div class="card mt-3 shadow mb-5">
-                    <div class="card-body">
-                        <h3 class="card-title">¡Buen Día Lucas! &#128516;</h3>
-                        <p class="card-text">Hace click para <b>continuar donde lo dejaste</b></p>
-                        <p> Clase 3 - Javascript - Programacion FrontEnd</p>
-                    </div>
-                </div>
-            </a> -->
-            <div class="card fuente shadow p-3 mb-5 mainCard">
-                <div class="card-body" style="padding:30px;">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-5">
-                            <h2 class="center" style="color: #3ea983; font-weight: 600;">Tus Estadisticas</h2>
-                            <h4 style="color: #707070; font-weight: 300; margin-top:15px;">De los ultimos 15 dias</h4>
-
-                            <h3 style="display: inline; color: #3ea983;">+3%</h3>
-                            <p style="display: inline-block; margin-top:60px; color: #707070; margin-left:10px;"> Algun
-                                Valor</p> <br>
-
-                            <h3 style="display: inline; color: #3ea983;" class="mt-5">+15%</h3>
-                            <p style="display: inline-block; color: #707070; margin-left:10px;"> Algun Valor </p>
-                            <br>
-
-                            <h3 style="display: inline; color: #3ea983;" class="mt-5">-6%</h3>
-                            <p style="display: inline-block; color: #707070; margin-left:10px;"> Algun Valor</p>
-
-                        </div>
-                        <div class="col-sm-12 col-md-7">
-                            <img src="assets/img/graph.png" style="width: 100%;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            
             <div class="mt-70 mobile"></div>
         </div>
 
