@@ -10,22 +10,32 @@
         <style>
 
 
+        @media (max-width: 767px) {
+        /* Estilos Mobile */
+        /* Mobile incluye tablet */
 
-            .mt-70{
+        .mobile {
+            display: block;
+        }
+
+        .desktop {
+            display: none;
+        }
+
+        
+        /* .menuVideo{
+                display: none;
+            } */
+
+        .mt-70{
                 height: 15vh;
             }
-
-
-
-
-
-
-
 
             video{
                 width: 100%;
                 left:0;
                 position: fixed;
+                display: block;
                 z-index: 500;
             }
 
@@ -39,9 +49,40 @@
                 margin-top:20px
             }
 
-            .card img{
-                /* margin-top:5px; */
+        /* Stats mobile */
+
+        .mainCard {
+            margin-top: 10vh;
+        }
+        }
+
+        @media (min-width: 767px) {
+        .desktop {
+            display: block;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        video{
+                width: 100%;
+                left:0;
+                display: block;
+                z-index: 500;
             }
+
+        .menuVideo{
+               padding:20px;
+               padding-left:40px;
+               margin-left:-20px;
+               z-index: -99;
+            }
+
+        }
+
+
+
 
         </style>
     </head>
@@ -56,10 +97,25 @@
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col" style="padding:0;">
+                <div class="col-8" style="padding:0;">
                     <video controls>
                         <source src="assets/img/sample.mp4" type="video/mp4">
                     </video>
+                </div>
+                <div class="col">
+                    <div class="card menuVideo">
+                        <h2>Titulos</h2>
+                        djsdhasd dashuadshukasd
+                        dsahjdsaads dashuhksdasd
+                    </div>
+                    <div class="card menuVideo">
+                        <h4>Tus Misiones</h4>
+                        <hr style="margin-bottom:40px;">
+                        <p style="color: #3ea983; font-size: 15px"><i class="icon icon-ok" style="font-size: 15px"></i>Completar 3 videos</p>
+                        <p style="color: #b4b4b4; font-size: 15px" ><i class="icon icon-ok" style="font-size: 15px"></i>Completar 2 misiones</p>
+                        <p style="color: #b4b4b4; font-size: 15px" ><i class="icon icon-ok" style="font-size: 15px"></i>Lanzar 2 tiros</p>
+
+                    </div>
                 </div>
             </div>
             <div class="content">
