@@ -111,7 +111,6 @@ Main CSS para el proyecto
   -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
   content: attr(data-av_icon);
-  speak: none;
   font-size: 40px;
   margin: auto;
 }
@@ -167,6 +166,36 @@ Main CSS para el proyecto
 .mt-70{
   height: 15vh;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -8,22 +8,25 @@
         <link rel="stylesheet" href="assets/icons/css/fontello.css">
         <link rel="stylesheet" href="assets/css/index.css">
         <style>
+
+            .icon-mini{
+                font-size:15px !important;
+            }
+
         .fotoPerfilComentario{
             border-radius: 30px; height: 50px; width: 50px;
         }
         
         .mision{
             color: #b4b4b4;
-             font-size: 15px
-        }
-
-        .icon{
-            font-size: 15px;
+            font-size: 15px
         }
 
         .misionCompletada{
             color: #3ea983 !important;
         }
+
+
 
         .menuVideo{
             margin-top:20px;
@@ -48,9 +51,6 @@
                 display: none;
             } */
 
-        .mt-70{
-                height: 15vh;
-            }
         
         .mt-140
         {
@@ -121,10 +121,10 @@
     <body>
         <div class="container-fluid">
             <div class="row menuMobile d-block d-md-none">
-                <a href="./index.html">Inicio</a>
-                <a href="MVPstats.html">Estadisticas</a>
-                <a href="#"  class="iconSeleccionado">Reproductor</a>
-                <a href="MVPperfil.html">Mi Perfil</a>
+                <a href="index.html"><i class="icon icon-home"></i></a>
+                <a href="MVPstats.html"><i class="icon icon-chart-bar"></i></a>
+                <a href="MVPreproductor.HTML"><i class="icon icon-play iconSeleccionado"></i></a>
+                <a href="MVPperfil.html"><i class="icon icon-user"></i></a>
             </div>
         </div>
         <div class="container">
@@ -151,7 +151,8 @@
                 </div>
                 <div class="mt-70"></div>
                 <div class="col-md-4 col-12 menuVideoDiv">
-                   
+                   <div class="mobile mt-70">
+                   </div>
                     <div class="card menuVideo">
                         <h2>Titulos</h2>
                         djsdhasd dashuadshukasd
@@ -160,9 +161,9 @@
                     <div class="card menuVideo">
                         <h4>Tus Misiones</h4>
                         <hr style="margin-bottom:40px;">
-                        <p class="mision misionCompletada"><i class="icon icon-ok"></i>Completar 3 videos</p>
-                        <p class="mision"><i class="icon icon-ok"></i>Completar 2 misiones</p>
-                        <p class="mision"><i class="icon icon-ok"></i>Lanzar 2 tiros</p>
+                        <p class="mision misionCompletada"><i class="icon icon-ok icon-mini"></i>Completar 3 videos</p>
+                        <p class="mision"><i class="icon icon-ok icon-mini"></i>Completar 2 misiones</p>
+                        <p class="mision"><i class="icon icon-ok icon-mini"></i>Lanzar 2 tiros</p>
                     </div>
 
               
