@@ -106,6 +106,7 @@ Main CSS para el proyecto
 }
 
 .icon {
+  display:block;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
