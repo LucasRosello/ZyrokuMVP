@@ -7,13 +7,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderDesktopComponent } from './header-desktop/header-desktop.component';
 import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { EstadisticasComponent } from './estadisticas/estadisticas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderDesktopComponent,
     HeaderMobileComponent,
-    InicioComponent
+    InicioComponent,
+    EstadisticasComponent
   ],
   imports: [
     BrowserModule,
