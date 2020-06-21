@@ -1,0 +1,102 @@
+
+            .icon-mini{
+                font-size:15px !important;
+            }
+
+        .fotoPerfilComentario{
+            border-radius: 30px; height: 50px; width: 50px;
+        }
+        
+        .mision{
+            color: #b4b4b4;
+            font-size: 15px
+        }
+
+        .misionCompletada{
+            color: #3ea983 !important;
+        }
+
+
+
+        .menuVideo{
+            margin-top:20px;
+            padding:20px;
+        }
+
+        @media (max-width: 767px) {
+        /* Estilos Mobile */
+        /* Mobile incluye tablet */
+
+
+        .mobile {
+            display: block;
+        }
+
+        .desktop {
+            display: none;
+        }
+
+        
+        /* .menuVideo{
+                display: none;
+            } */
+
+        
+        .mt-140
+        {
+            height: 30vh;
+        }
+
+            video{
+                width: 100%;
+                left:0;
+                position: fixed;
+                display: block;
+                z-index: 500;
+            }
+
+            .content{
+                margin-top: 240px;
+                
+            }
+
+            .content .card{
+                padding: 20px;
+                margin-top:20px
+            }
+
+        /* Stats mobile */
+
+        .mainCard {
+            margin-top: 10vh;
+        }
+        }
+
+        @media (min-width: 767px) {
+            .menuVideoDiv{
+            margin-top:65px;
+        }
+
+
+        .desktop {
+            display: block;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        video{
+                width: 100%;
+                left:0;
+                margin-top: 70;
+                display: block;
+                z-index: 500;
+            }
+
+        .menuVideo{
+
+               z-index: -99;
+            }
+
+        }
