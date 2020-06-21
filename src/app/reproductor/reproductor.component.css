@@ -28,18 +28,6 @@
         /* Mobile incluye tablet */
 
 
-        .mobile {
-            display: block;
-        }
-
-        .desktop {
-            display: none;
-        }
-
-        
-        /* .menuVideo{
-                display: none;
-            } */
 
         
         .mt-140
@@ -65,11 +53,6 @@
                 margin-top:20px
             }
 
-        /* Stats mobile */
-
-        .mainCard {
-            margin-top: 10vh;
-        }
         }
 
         @media (min-width: 767px) {

@@ -17,6 +17,12 @@ export class ReproductorComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(document.getElementById("video").offsetWidth)
+
+    //
+  }
+
+  onResize() {
+    document.getElementById("colVideo").style.height = String(document.getElementById("video").offsetHeight + "px")
   }
 
 }
