@@ -1,9 +1,9 @@
 
 <div class="container-fluid" (window:resize)="onResize()">
     <div class="row">
-        <div id="colVideo" class="col-md-8 col-12" style="padding:0;">
-            <video id="video" controls >
-                <source src="assets/img/sample.mp4" type="video/mp4">
+        <div id="colVideo" class="col-md-8 col-12" style="padding:0; height: 390px;">
+            <video id="video" controls (load)="onResize()">
+                <source src="assets/img/sample.mp4" (load)="onResize()" type="video/mp4">
             </video>
         </div>
         <div class="mt-70"></div>

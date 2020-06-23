@@ -16,14 +16,16 @@ export class ReproductorComponent implements AfterViewInit {
   // }
 
   ngAfterViewInit(): void {
+    
     console.log("dasdsa");
-    console.log(this.hola());
+this.hola();
     this.onResize();
     document.getElementById("colVideo").style.height = String(document.getElementById("video").offsetHeight + "px")
   }
 
-  hola(){
-    return 2;
+  async hola(){
+    await new Promise( resolve => setTimeout(resolve, 300) );
+    document.getElementById("colVideo").style.height = String(document.getElementById("video").offsetHeight + "px")
   }
 
   onResize() {
