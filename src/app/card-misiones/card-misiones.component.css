@@ -1,0 +1,21 @@
+hr {
+    margin-bottom:40px;
+}
+
+.icon-mini{
+    font-size:15px !important;
+}
+
+.mision{
+    color: #b4b4b4;
+    font-size: 15px
+}
+
+.misionCompletada{
+    color: #3ea983 !important;
+}
+
+.menuVideo{
+    margin-top:20px;
+    padding:20px;
+}

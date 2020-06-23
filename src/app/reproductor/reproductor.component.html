@@ -2,7 +2,7 @@
 <div class="container-fluid" (window:resize)="onResize()">
     <div class="row">
         <div id="colVideo" class="col-md-8 col-12" style="padding:0;">
-            <video id="video" controls>
+            <video id="video" controls >
                 <source src="assets/img/sample.mp4" type="video/mp4">
             </video>
         </div>
@@ -15,13 +15,7 @@
                 djsdhasd dashuadshukasd
                 dsahjdsaads dashuhksdasd
             </div>
-            <div class="card menuVideo">
-                <h4>Tus Misiones</h4>
-                <hr style="margin-bottom:40px;">
-                <p class="mision misionCompletada"><i class="icon icon-ok icon-mini"></i>Completar 3 videos</p>
-                <p class="mision"><i class="icon icon-ok icon-mini"></i>Completar 2 misiones</p>
-                <p class="mision"><i class="icon icon-ok icon-mini"></i>Lanzar 2 tiros</p>
-            </div>
+            <app-card-misiones></app-card-misiones>
 
       
         </div>

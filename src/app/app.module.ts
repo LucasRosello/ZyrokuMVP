@@ -9,6 +9,7 @@ import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { EstadisticasComponent } from './estadisticas/estadisticas.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
+import { CardMisionesComponent } from './card-misiones/card-misiones.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
     HeaderMobileComponent,
     InicioComponent,
     EstadisticasComponent,
-    ReproductorComponent
+    ReproductorComponent,
+    CardMisionesComponent
   ],
   imports: [
     BrowserModule,
