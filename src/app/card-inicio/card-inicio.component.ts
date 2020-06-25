@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NoticiasService } from '../servicios/noticias/noticias.service';
 
 @Component({
   selector: 'app-card-inicio',
@@ -7,16 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardInicioComponent implements OnInit {
 
+  noticias = {};
   titulo = "Novedades de PHP 7.3"
   descripcion = "Hoy mientras comía me he visto esta charla de Rasmus Lerdorf (el creador de PHP)…"
   link = "https://medium.com/@ger86/novedades-de-php-7-3-9f603f4885e0";
   destacado = false;
 
-  constructor() { 
+  constructor(public noticiasService:NoticiasService) {
+     this.getNoticias()
   }
 
   ngOnInit(): void {
     
+  }
+
+  async getNoticias() {
+    this.noticias = await this.noticiasService.getNoticias()
   }
 
 }
