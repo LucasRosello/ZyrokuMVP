@@ -10,6 +10,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { EstadisticasComponent } from './estadisticas/estadisticas.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 import { CardMisionesComponent } from './card-misiones/card-misiones.component';
+import { CardInicioComponent } from './card-inicio/card-inicio.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CardMisionesComponent } from './card-misiones/card-misiones.component';
     InicioComponent,
     EstadisticasComponent,
     ReproductorComponent,
-    CardMisionesComponent
+    CardMisionesComponent,
+    CardInicioComponent
   ],
   imports: [
     BrowserModule,

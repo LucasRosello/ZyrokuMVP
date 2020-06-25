@@ -1,0 +1,27 @@
+.card{margin-top: 30px;}
+
+.card-body{padding: 1rem !important}
+
+.col8Texto{padding:5px}
+
+.col12Texto{padding:20px}
+
+img{
+    border-radius:5px;
+    max-height: 200px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+}
+
+a,
+a:hover,
+a:visited{
+    color: #7c7c7c;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #2b9e2b;
+}

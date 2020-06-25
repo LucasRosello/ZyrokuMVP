@@ -1,0 +1,19 @@
+<a href="{{link}}" >
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div [className]="destacado ? 'col-12' : 'col-4'">
+                    <img src="assets/img/1*iWS1FXC2s98r37HTQRayFw.png" alt="Card image cap">
+                </div>
+                <div [ngClass]="{'col12Texto' : destacado, 'col4Texto' : !destacado, 'col':true}">
+                    <h5 class="card-title">{{titulo}}</h5>
+                    <p class="card-text">{{descripcion}}</p>
+                    
+                        <blockquote class="blockquote mb-0">
+                            <footer class="blockquote-footer">Keith Adams <cite title="Source Title">Oct 12, 2016</cite></footer>
+                        </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
