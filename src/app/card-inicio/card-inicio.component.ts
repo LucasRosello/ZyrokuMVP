@@ -8,7 +8,8 @@ import { NoticiasService } from '../servicios/noticias/noticias.service';
 })
 export class CardInicioComponent implements OnInit {
 
-  noticias = {};
+  arrayNoticias
+  noticias = {}
   titulo = "Novedades de PHP 7.3"
   descripcion = "Hoy mientras comía me he visto esta charla de Rasmus Lerdorf (el creador de PHP)…"
   link = "https://medium.com/@ger86/novedades-de-php-7-3-9f603f4885e0";
@@ -22,8 +23,12 @@ export class CardInicioComponent implements OnInit {
     
   }
 
-  async getNoticias() {
-    this.noticias = await this.noticiasService.getNoticias()
+  getNoticias() {
+    this.noticiasService.getNoticias().subscribe(noticias=>{
+      this.arrayNoticias = noticias['data']
+    })
+    console.log(this.arrayNoticias)
+    //no funciona, ver asincronismo
   }
 
 }
