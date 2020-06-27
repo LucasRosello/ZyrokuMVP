@@ -8,8 +8,27 @@ import { NoticiasService } from '../servicios/noticias/noticias.service';
 })
 export class CardInicioComponent implements OnInit {
 
-  arrayNoticias
-  noticias = {}
+  contacts: Observable<Contact[]>;
+  arrayNoticias = Observable.of([
+    {
+      "destacado": false,
+      "_id": "5ef421c5d4e37b3f448a5ee8",
+      "verificado": false,
+      "titulo": "ay caramba",
+      "descripcion": "esto es traido a ustedes por buzz cola",
+      "link": "https://www.google.com",
+      "__v": 0
+    },
+    {
+      "destacado": false,
+            "_id": "5ef421fad4e37b3f448a5ee9",
+            "verificado": false,
+            "titulo": "ay caramba",
+            "descripcion": "esto es traido a ustedes por buzz cola",
+            "link": "https://www.google.com",
+            "__v": 0
+    }
+  ])
   titulo = "Novedades de PHP 7.3"
   descripcion = "Hoy mientras comía me he visto esta charla de Rasmus Lerdorf (el creador de PHP)…"
   link = "https://medium.com/@ger86/novedades-de-php-7-3-9f603f4885e0";
@@ -24,11 +43,12 @@ export class CardInicioComponent implements OnInit {
   }
 
   getNoticias() {
-    this.noticiasService.getNoticias().subscribe(noticias=>{
-      this.arrayNoticias = noticias['data']
-    })
-    console.log(this.arrayNoticias)
-    //no funciona, ver asincronismo
+    // this.noticiasService.getNoticias().subscribe(noticias=>{
+    //   this.arrayNoticias.push(noticias['data'].map(function(noticiaItem) {
+    //     return noticiaItem;
+    //   }))
+    // })
+    //dios super ineficiente. No lo logro hacer andar
   }
 
 }
