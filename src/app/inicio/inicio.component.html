@@ -3,9 +3,8 @@
 <div class="row main">
     <div class="col-sm-12 col-md-7">
         
-        <div *ngFor="let item-noticia of arrayNoticias">
-            <p>2</p>
-        </div>
+    
+    <app-card-inicio *ngFor="let item-noticia of arrayNoticias" [item-noticia]="item-noticia"></app-card-inicio>
       
     </div>
     <div class="col-5 desktop">
