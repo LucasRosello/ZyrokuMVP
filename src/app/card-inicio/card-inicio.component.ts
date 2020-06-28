@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NoticiasService } from '../servicios/noticias/noticias.service';
 
 @Component({
   selector: 'app-card-inicio',
@@ -11,26 +10,21 @@ export class CardInicioComponent implements OnInit {
   @Input()
   itemNoticia
   
-  titulo = this.itemNoticia["titulo"]
-  descripcion = "Hoy mientras comía me he visto esta charla de Rasmus Lerdorf (el creador de PHP)…"
-  link = "https://medium.com/@ger86/novedades-de-php-7-3-9f603f4885e0";
+  titulo = ""
+  descripcion = ""
+  link = ""
   destacado = false;
 
-  constructor(public noticiasService:NoticiasService) {
-     this.getNoticias()
+  constructor() {
   }
 
   ngOnInit(): void {
-    
+    this.titulo = this.itemNoticia["titulo"]
+    this.descripcion = this.itemNoticia["descripcion"]
+    this.link = this.itemNoticia["link"]
+    this.destacado = this.itemNoticia["destacado"];
   }
 
-  getNoticias() {
-    // this.noticiasService.getNoticias().subscribe(noticias=>{
-    //   this.arrayNoticias.push(noticias['data'].map(function(noticiaItem) {
-    //     return noticiaItem;
-    //   }))
-    // })
-    //dios super ineficiente. No lo logro hacer andar
-  }
+  
 
 }

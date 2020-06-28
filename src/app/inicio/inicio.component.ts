@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NoticiasService } from '../servicios/noticias/noticias.service';
+
 
 @Component({
   selector: 'app-inicio',
@@ -7,30 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  arrayNoticias = [
-    {
-      destacado: false,
-      _id: "5ef421c5d4e37b3f448a5ee8",
-      verificado: false,
-      titulo: "ay caramba",
-      descripcion: "esto es traido a ustedes por buzz cola",
-      link: "https://www.google.com",
-      __v: 0
-    },
-    {
-      destacado: false,
-      _id: "5ef421c5d4e37b3f448a5ee8",
-      verificado: false,
-      titulo: "ay caramba",
-      descripcion: "esto es traido a ustedes por buzz cola",
-      link: "https://www.google.com",
-      __v: 0
-    }
-  ]
+  arrayNoticias = new Object()
 
-  constructor() { }
+  constructor(public noticiasService:NoticiasService) { 
+    this.getNoticias()
+  }
 
   ngOnInit(): void {
+  }
+
+  getNoticias() {
+    this.noticiasService.getNoticias().subscribe(noticia=>{
+     this.arrayNoticias = noticia["data"];
+    })
+   
   }
 
 }
