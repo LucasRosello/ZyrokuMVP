@@ -12,6 +12,7 @@ import { EstadisticasComponent } from './estadisticas/estadisticas.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 import { CardMisionesComponent } from './card-misiones/card-misiones.component';
 import { CardInicioComponent } from './card-inicio/card-inicio.component';
+import { MercadopagoComponent } from './mercadopago/mercadopago.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardInicioComponent } from './card-inicio/card-inicio.component';
     EstadisticasComponent,
     ReproductorComponent,
     CardMisionesComponent,
-    CardInicioComponent
+    CardInicioComponent,
+    MercadopagoComponent
   ],
   imports: [
     BrowserModule,
