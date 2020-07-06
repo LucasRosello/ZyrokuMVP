@@ -13,6 +13,7 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
 import { CardMisionesComponent } from './card-misiones/card-misiones.component';
 import { CardInicioComponent } from './card-inicio/card-inicio.component';
 import { MercadopagoComponent } from './mercadopago/mercadopago.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MercadopagoComponent } from './mercadopago/mercadopago.component';
     ReproductorComponent,
     CardMisionesComponent,
     CardInicioComponent,
-    MercadopagoComponent
+    MercadopagoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
