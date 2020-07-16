@@ -14,6 +14,7 @@ import { CardMisionesComponent } from './card-misiones/card-misiones.component';
 import { CardInicioComponent } from './card-inicio/card-inicio.component';
 import { MercadopagoComponent } from './mercadopago/mercadopago.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
