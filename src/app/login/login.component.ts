@@ -17,12 +17,18 @@ export class LoginComponent implements OnInit {
   }
 
   loguear() {
-
-    // console.log(this.usuario, this.pass)
-    this.loginService.loguear(this.usuario, this.password).subscribe(response=>{
-      console.log(response)
-    })
-   
+    try {
+      this.loginService.loguear(this.usuario, this.password).subscribe(response=>{
+        
+        if(response["data"]["token"])
+        {
+          localStorage.setItem('token', response["data"]["token"])
+        }
+      })
+    }
+    catch{
+      console.log("error")
+    }
   }
 
 }
