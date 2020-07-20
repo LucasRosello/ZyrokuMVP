@@ -1,7 +1,11 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="card center" style="margin-top:400px; width: 40%; height: 40vh;">
+            <div *ngIf="error" class="card text-white bg-warning mb-3" style="margin-top:400px; max-width: 18rem;">
+                {{mensaje}}
+            </div>
+          
+            <div class="card center" style="margin-top:40px; width: 40%; height: 40vh;">
                 <input [(ngModel)]="usuario">
                 <input [(ngModel)]="password">
                 <button (click)="loguear()">Iniciar Sesion</button>

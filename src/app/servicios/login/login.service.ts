@@ -10,7 +10,7 @@ export class LoginService {
 
   loguear(usuario, password)
   {
-    console.log("llego al service"+usuario+password)
+    
 
     let headersClient = new HttpHeaders();
     headersClient.append('Access-Control-Allow-Origin', 'http://localhost:3000');
@@ -21,6 +21,8 @@ export class LoginService {
       },
       {headers: headersClient}
     );
+    
+
   }
 
   registrar(){}

@@ -10,6 +10,8 @@ export class LoginComponent implements OnInit {
 
   usuario = ""
   password = ""
+  error = true
+  mensaje = "error"
 
   constructor(public loginService:LoginService) { }
 
@@ -19,11 +21,30 @@ export class LoginComponent implements OnInit {
   loguear() {
     try {
       this.loginService.loguear(this.usuario, this.password).subscribe(response=>{
-        
-        if(response["data"]["token"])
+        console.log(response)
+        if(response["data"])
         {
           localStorage.setItem('token', response["data"]["token"])
         }
+        else
+        {
+          this.error = true
+          switch (response["status"]) {
+            
+            case "not_found":
+              this.mensaje = "Usuario no encontrado"
+              break;
+            
+            case "wrong_password":
+              this.mensaje = "contraseña incorrecta"
+              break;
+
+            default:
+              console.log("fatal")
+              break;
+          }
+        }
+
       })
     }
     catch{
