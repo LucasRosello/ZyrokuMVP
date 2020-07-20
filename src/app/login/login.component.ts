@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
 
   usuario = ""
   password = ""
-  error = true
+  error = false
   mensaje = "error"
 
   constructor(public loginService:LoginService) { }
