@@ -1,16 +1,18 @@
-<div class="container d-flex h-100">
-    <div class="row justify-content-center align-self-center">
+<div class="container h-100">
+    <div class="row justify-content-center align-self-center" style="height: 100vh;">
         <div class="col-12">
-            <div *ngIf="error" class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top:400px;" >
+            <div *ngIf="error" class="error alert alert-danger alert-dismissible fade show" role="alert" style="margin-top:400px;" >
                 {{mensaje}}
                 <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button> -->
             </div>
-            <div class="card center loginCard">
+            <div class="card center loginCard vertical-center">
                 <input [(ngModel)]="usuario">
                 <input [(ngModel)]="password">
                 <button (click)="loguear()">Iniciar Sesion</button>
+                <p>¿No tenes cuenta?<a href="">Registrate</a></p>
+                <a>Olvide mi contraseña</a>
             </div>
         </div>
     </div>
