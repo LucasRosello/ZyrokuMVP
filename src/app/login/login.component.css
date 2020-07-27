@@ -6,7 +6,7 @@
 }
 
 .loginCard * {
-    margin:20px;
+    margin:10px;
 }
 
 .vertical-center {
@@ -17,6 +17,6 @@
     transform: translateY(-50%);
   }
 
-.error{
- margin-top: 600px;
-}
+    .loginCard{
+        width:350px;
+    }
