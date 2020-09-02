@@ -10,8 +10,9 @@ export class LoginComponent implements OnInit {
 
   usuario = ""
   password = ""
-  error = true
+  error = false
   mensaje = "error"
+  clicked = false
 
   constructor(public loginService:LoginService) { }
 
@@ -30,17 +31,17 @@ export class LoginComponent implements OnInit {
         {
           this.error = true
           switch (response["status"]) {
-            
+          
             case "not_found":
               this.mensaje = "Usuario no encontrado"
               break;
             
             case "wrong_password":
-              this.mensaje = "contraseña incorrecta"
+              this.mensaje = "Contraseña incorrecta"
               break;
 
             default:
-              console.log("fatal")
+              this.mensaje = "Ocurrio un error fatal, intente de nuevo, mas tarde"
               break;
           }
         }

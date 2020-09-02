@@ -2,14 +2,14 @@
     <div class="row justify-content-center align-self-center" style="height: 100vh;">
         <div class="col-12" style="display:grid; place-items:center">
             
-                <div *ngIf="error" class="alert alert-danger alert-dismissible fade show" role="alert">
-                    {{mensaje}}
-                </div>
                 <div class="card center loginCard vertical-center">
+                    <div *ngIf="error" class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{mensaje}}
+                    </div>
                     <h1 style="text-align: center; margin-bottom: 30px;">Zyroku</h1>
                     <input [(ngModel)]="usuario" placeholder="Usuario">
                     <input [(ngModel)]="password" placeholder="Contraseña">
-                    <button class="btn btn-lg btn-success" (click)="loguear()" style="margin-top:30px">Iniciar Sesion</button>
+                    <button class="btn btn-lg btn-success" [disabled]="clicked" (click)="loguear(); clicked = true;" style="margin-top:30px">Iniciar Sesion</button>
                     <p style="margin-top:30px">¿No tenes cuenta?
                     <a href="" style="margin:0">Registrate</a></p>
                     <a href=#>Olvide mi contraseña</a>
