@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderDesktopComponent implements OnInit {
 
+  usuario = localStorage.getItem("usuario")
+  tokenExists = true //if(localStorage.getItem("token")){ return true };
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

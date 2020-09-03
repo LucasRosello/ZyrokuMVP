@@ -26,6 +26,9 @@ export class LoginComponent implements OnInit {
         if(response["data"])
         {
           localStorage.setItem('token', response["data"]["token"])
+          localStorage.setItem('usuario', response["data"]["usuario"])
+          window.location.href = '/'
+
         }
         else
         {
@@ -45,7 +48,6 @@ export class LoginComponent implements OnInit {
               break;
           }
         }
-
       })
     }
     catch{

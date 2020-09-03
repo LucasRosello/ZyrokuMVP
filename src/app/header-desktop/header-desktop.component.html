@@ -6,7 +6,8 @@
                     <a routerLink="" class="iconSeleccionado">Inicio</a>
                     <a routerLink="stats" >Estadisticas</a>
                     <a routerLink="view" >Reproductor</a>
-                    <a routerLink="loguear" >Loguear</a>
+                    <a *ngIf="usuario">{{usuario}}</a>
+                    <a *ngIf="!usuario" routerLink="loguear" >Loguear</a>
                 </div>
             </div>
         </div>
