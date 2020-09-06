@@ -15,6 +15,7 @@ import { CardInicioComponent } from './card-inicio/card-inicio.component';
 import { MercadopagoComponent } from './mercadopago/mercadopago.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     CardMisionesComponent,
     CardInicioComponent,
     MercadopagoComponent,
-    LoginComponent
+    LoginComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
