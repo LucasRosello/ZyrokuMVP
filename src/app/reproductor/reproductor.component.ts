@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClasesService } from '../servicios/clases/clases.service';
 
 @Component({
   selector: 'app-reproductor',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReproductorComponent implements OnInit {
 
-  constructor() { 
+  clase = new Object()
+
+  constructor(public clasesService:ClasesService) { 
+    this.getClase(/*id*/)
+  }
+
+  getClase(/*id*/) {
+    this.clasesService.getClasePorId().subscribe(clase=>{
+     this.clase = clase["data"]["clase"];
+     console.log(this.clase)
+     console.log(this.clase['url'])
+    })
     
   }
 
