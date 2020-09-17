@@ -18,7 +18,6 @@ export class ReproductorComponent implements OnInit {
     this.clasesService.getClasePorId().subscribe(clase=>{
      this.clase = clase["data"]["clase"];
      console.log(this.clase)
-     console.log(this.clase['url'])
     })
     
   }

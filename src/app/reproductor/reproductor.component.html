@@ -2,8 +2,8 @@
 <div class="container-fluid" (window:resize)="onResize()">
     <div class="row">
         <div id="colVideo" class="col-md-8 col-12" style="padding:0; height: 390px;">
-            <video id="video" controls (load)="onResize()">
-                <source src="{{clase['url']}}" (load)="onResize()" type="video/mp4">
+            <video *ngIf="clase['url']" id="video" controls (load)="onResize()">
+                <source [src]="clase['url']" (load)="onResize()" type="video/mp4">
             </video>
         </div>
         <div class="mt-70"></div>
