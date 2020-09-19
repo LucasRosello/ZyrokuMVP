@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClasesService } from '../servicios/clases/clases.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-reproductor',
@@ -10,22 +12,27 @@ export class ReproductorComponent implements OnInit {
 
   clase = new Object()
 
-  constructor(public clasesService:ClasesService) { 
-    this.getClase(/*id*/)
-  }
 
-  getClase(/*id*/) {
-    this.clasesService.getClasePorId().subscribe(clase=>{
-     this.clase = clase["data"]["clase"];
-     console.log(this.clase)
-    })
+  constructor(private route: ActivatedRoute, public clasesService:ClasesService) { 
     
   }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params =>{
+      const id = params["id"].toString();
+      this.getClase(id)
+    });
 
     this.cargar();
    
+  }
+
+  getClase(id) {
+    this.clasesService.getClasePorId(id).subscribe(clase=>{
+     this.clase = clase["data"];
+     console.log(this.clase)
+    })
+    
   }
 
   async cargar(){
@@ -34,7 +41,10 @@ export class ReproductorComponent implements OnInit {
   }
 
   onResize() {
-    document.getElementById("colVideo").style.height = String(document.getElementById("video").offsetHeight + "px")
+    if(this.clase['url'])
+    {
+      document.getElementById("colVideo").style.height = String(document.getElementById("video").offsetHeight + "px")
+    }
   }
 
 }

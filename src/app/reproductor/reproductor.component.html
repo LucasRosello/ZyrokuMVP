@@ -11,9 +11,10 @@
            
          
             <div class="card menuVideo">
-                <h2>Titulos</h2>
-                djsdhasd dashuadshukasd
-                dsahjdsaads dashuhksdasd
+                <h2>{{clase["titulo"]}}</h2>
+                {{clase["modulo"]}}
+                <a *ngIf="clase['claseAnterior']" routerLink="['/view',{{clase['claseAnterior']}}]">Clase Anterior</a>
+                <a *ngIf="clase['claseSiguiente']" [routerLink]="['/view',clase['claseSiguiente']]">Clase Siguiente</a>
             </div>
             <app-card-misiones></app-card-misiones>
 

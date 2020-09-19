@@ -8,8 +8,8 @@ export class ClasesService {
 
   constructor(private http: HttpClient) { }
 
-  getClasePorId()
+  getClasePorId(id)
   {
-    return this.http.get('http://localhost:3000/clases/123')
+    return this.http.get('http://localhost:3000/clases/'+id)
   }
 }
