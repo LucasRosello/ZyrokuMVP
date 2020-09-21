@@ -12,7 +12,6 @@ export class ReproductorComponent implements OnInit {
 
   clase = new Object()
 
-
   constructor(private route: ActivatedRoute, public clasesService:ClasesService) { 
     
   }
@@ -30,6 +29,8 @@ export class ReproductorComponent implements OnInit {
   getClase(id) {
     this.clasesService.getClasePorId(id).subscribe(clase=>{
      this.clase = clase["data"];
+     let video = <HTMLVideoElement> document.getElementById("video");
+     video.load()
      console.log(this.clase)
     })
     
