@@ -8,7 +8,7 @@ import { Router } from '@angular/router'; //ROUTING
 })
 export class HeaderDesktopComponent implements OnInit {
 
-  usuario = localStorage.getItem("usuario")
+  email = localStorage.getItem("email")
   tokenExists = true //if(localStorage.getItem("token")){ return true };
 
   constructor(private router: Router) { } //ROUTING
@@ -18,7 +18,7 @@ export class HeaderDesktopComponent implements OnInit {
   }
 
   cerrarSesion(){
-    this.usuario = null
+    this.email = null
     this.tokenExists = false
     localStorage.clear()
     this.router.navigate(['/']); //ROUTING

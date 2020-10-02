@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
         if(response["data"])
         {
           localStorage.setItem('token', response["data"]["token"])
-          localStorage.setItem('usuario', response["data"]["usuario"])
+          localStorage.setItem('email', response["data"]["email"])
           window.location.href = '/'
         }
         else

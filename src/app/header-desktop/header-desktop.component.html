@@ -8,14 +8,14 @@
                     <a routerLink="view" >Reproductor</a>
                     
                     <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
-                        <a *ngIf="usuario" id="dropdownManual" ngbDropdownAnchor (click)="myDrop.open()">{{usuario}}</a>
+                        <a *ngIf="email" id="dropdownManual" ngbDropdownAnchor (click)="myDrop.open()">{{email}}</a>
                         <div ngbDropdownMenu aria-labelledby="dropdownManual">
                           <button ngbDropdownItem>Mi cuenta</button>
                           <button ngbDropdownItem>Configuración</button>
                           <button ngbDropdownItem (click)="cerrarSesion()">Cerrar Sesion</button>
                         </div>
                       </div>
-                    <a *ngIf="!usuario" routerLink="loguear" >Loguear</a>
+                    <a *ngIf="!email" routerLink="loguear" >Loguear</a>
                 </div>
             </div>
         </div>

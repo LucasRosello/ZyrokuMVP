@@ -29,9 +29,12 @@ export class RegistrarComponent implements OnInit {
       }
 
       this.registrarService.registrar(this.email, this.password).subscribe(response=>{
-        console.log(response)
-        console.log("asdas")
-        //NO LLEGA RESPUESTA
+        if(response["data"])
+        {
+          // localStorage.setItem('token', response["data"]["token"])
+          // localStorage.setItem('email', response["data"]["email"])
+          window.location.href = '/loguear'
+        }
       });
 
     } catch {
