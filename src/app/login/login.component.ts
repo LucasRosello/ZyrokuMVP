@@ -8,7 +8,7 @@ import { LoginService } from '../servicios/login/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  usuario = ""
+  email = ""
   password = ""
   error = false
   mensaje = "error"
@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('token', response["data"]["token"])
           localStorage.setItem('usuario', response["data"]["usuario"])
           window.location.href = '/'
-
         }
         else
         {

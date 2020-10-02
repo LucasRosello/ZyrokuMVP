@@ -7,12 +7,12 @@
                         {{mensaje}}
                     </div>
                     <h1 style="text-align: center; margin-bottom: 30px;">Zyroku</h1>
-                    <input [(ngModel)]="email" placeholder="Usuario">
+                    <input [(ngModel)]="email" placeholder="Email">
                     <input [(ngModel)]="password" placeholder="Contraseña">
-                    <button class="btn btn-lg btn-success" [disabled]="clicked" (click)="loguear(); clicked = true;" style="margin-top:30px">Iniciar Sesion</button>
-                    <p style="margin-top:30px">¿No tenes cuenta?
-                    <a routerLink="/registrar" style="margin:0">Registrate</a></p>
-                    <a href=#>Olvide mi contraseña</a>
+                    <input [(ngModel)]="password" placeholder="Repetir Contraseña">
+                    <button class="btn btn-lg btn-success" [disabled]="clicked" (click)="loguear(); clicked = true;" style="margin-top:30px">Crear Cuenta</button>
+                    <p style="margin-top:30px">¿Ya tenes cuenta?
+                    <a routerLink="/loguear" style="margin:0">Inicia Sesion</a></p>
                 </div>
             
         </div>

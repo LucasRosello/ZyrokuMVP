@@ -5,6 +5,7 @@ import { EstadisticasComponent } from './estadisticas/estadisticas.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 import { LoginComponent } from './login/login.component';
 import { LandingComponent } from './landing/landing.component';
+import { RegistrarComponent } from './registrar/registrar.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:"landing", component: LandingComponent},
   {path:"stats", component: EstadisticasComponent},
   {path:"view/:id", component: ReproductorComponent},
-  {path:"loguear", component: LoginComponent}
+  {path:"loguear", component: LoginComponent},
+  {path:"registrar", component: RegistrarComponent},
 ];
 
 @NgModule({

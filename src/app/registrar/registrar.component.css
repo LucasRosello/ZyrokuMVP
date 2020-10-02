@@ -1,0 +1,22 @@
+.loginCard{
+    width: 100%;
+    
+
+    padding:30px;
+}
+
+.loginCard * {
+    margin:10px;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+    .loginCard{
+        width:350px;
+    }
