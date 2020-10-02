@@ -9,8 +9,8 @@
                     <h1 style="text-align: center; margin-bottom: 30px;">Zyroku</h1>
                     <input [(ngModel)]="email" placeholder="Email">
                     <input [(ngModel)]="password" placeholder="Contraseña">
-                    <input [(ngModel)]="password" placeholder="Repetir Contraseña">
-                    <button class="btn btn-lg btn-success" [disabled]="clicked" (click)="loguear(); clicked = true;" style="margin-top:30px">Crear Cuenta</button>
+                    <input [(ngModel)]="passwordRepeat" placeholder="Repetir Contraseña">
+                    <button class="btn btn-lg btn-success" [disabled]="clicked" (click)="registrar(); clicked = true;" style="margin-top:30px">Crear Cuenta</button>
                     <p style="margin-top:30px">¿Ya tenes cuenta?
                     <a routerLink="/loguear" style="margin:0">Inicia Sesion</a></p>
                 </div>

@@ -4,19 +4,19 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class RegistrarService {
 
   constructor(private http: HttpClient) { }
 
-  
-  loguear(email, password)
+
+  registrar(email, password)
   {
     
 
     let headersClient = new HttpHeaders();
     headersClient.append('Access-Control-Allow-Origin', 'http://localhost:3000');
 
-    return this.http.post('http://localhost:3000/autenticacion/loguear',{
+    return this.http.post('http://localhost:3000/autenticacion/registrar',{
         email: email,
         password: password
       },
@@ -25,5 +25,4 @@ export class LoginService {
     
 
   }
-
 }

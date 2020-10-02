@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   loguear() {
     try {
-      this.loginService.loguear(this.usuario, this.password).subscribe(response=>{
+      this.loginService.loguear(this.email, this.password).subscribe(response=>{
         console.log(response)
         if(response["data"])
         {
