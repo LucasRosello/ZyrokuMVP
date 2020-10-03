@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { LandingComponent } from './landing/landing.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { ResetearPasswordComponent } from './resetear-password/resetear-password.component';
+import { CambiarPasswordComponent } from './cambiar-password/cambiar-password.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ResetearPasswordComponent } from './resetear-password/resetear-password
     LoginComponent,
     LandingComponent,
     RegistrarComponent,
-    ResetearPasswordComponent
+    ResetearPasswordComponent,
+    CambiarPasswordComponent
   ],
   imports: [
     BrowserModule,

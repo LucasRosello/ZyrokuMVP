@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   loguear() {
     try {
       this.loginService.loguear(this.email, this.password).subscribe(response=>{
+        //ese subscribe es caca, hay que hacer refactor!!!!
         console.log(response)
         if(response["data"])
         {
@@ -32,6 +33,10 @@ export class LoginComponent implements OnInit {
         else
         {
           this.error = true
+          // Se puede borrar este switch
+          //
+          // return res.json({status: "not_found", message: "Usuario no encontrado", data: null});
+          // imprimiendo directamente el "message" de la response
           switch (response["status"]) {
           
             case "not_found":

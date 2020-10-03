@@ -26,17 +26,16 @@ export class RegistrarComponent implements OnInit {
       if(this.password != this.passwordRepeat) {
         this.error = true
         this.mensaje = "Las contraseñas no coinciden"
+      } else {
+        this.registrarService.registrar(this.email, this.password).subscribe(response=>{
+          if(response["data"])
+          {
+            // localStorage.setItem('token', response["data"]["token"])
+            // localStorage.setItem('email', response["data"]["email"])
+            window.location.href = '/loguear'
+          }
+        });
       }
-
-      this.registrarService.registrar(this.email, this.password).subscribe(response=>{
-        if(response["data"])
-        {
-          // localStorage.setItem('token', response["data"]["token"])
-          // localStorage.setItem('email', response["data"]["email"])
-          window.location.href = '/loguear'
-        }
-      });
-
     } catch {
       console.log("error")
     }

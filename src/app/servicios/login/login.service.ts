@@ -9,10 +9,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   
-  loguear(email, password)
-  {
-    
-
+  loguear(email, password) {
     let headersClient = new HttpHeaders();
     headersClient.append('Access-Control-Allow-Origin', 'http://localhost:3000');
 
@@ -20,10 +17,23 @@ export class LoginService {
         email: email,
         password: password
       },
-      {headers: headersClient}
+      { headers: headersClient }
     );
-    
+  }
 
+  generarCambioPass(email){
+    let headersClient = new HttpHeaders();
+    headersClient.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+
+    return this.http.post('http://localhost:3000/autenticacion/generarCambioPassword',{
+        email: email,
+      },
+      { headers: headersClient }
+    );
+  }
+
+  cambiarPass(){
+    //mandar request con token
   }
 
 }
