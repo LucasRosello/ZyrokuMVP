@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../servicios/login/login.service';
 
 @Component({
   selector: 'app-cambiar-password',
@@ -14,7 +15,7 @@ export class CambiarPasswordComponent implements OnInit {
   clicked = false
   
 
-  constructor(public registrarService:RegistrarService) { }
+  constructor(public loginService:LoginService) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +25,7 @@ export class CambiarPasswordComponent implements OnInit {
       this.error = true
       this.mensaje = "Las contraseñas no coinciden"
     } else {
-      // this.registrarService.registrar(this.password).subscribe(response=>{
+      // this.loginService.cambiarPass(this.password).subscribe(response=>{
       //   if(response["data"])
       //   {
       //     // localStorage.setItem('token', response["data"]["token"])
