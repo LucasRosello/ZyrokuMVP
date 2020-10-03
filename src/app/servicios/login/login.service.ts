@@ -32,8 +32,15 @@ export class LoginService {
     );
   }
 
-  cambiarPass(){
-    //mandar request con token
+  cambiarPass(newPassword){
+    let headersClient = new HttpHeaders();
+    headersClient.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+
+    return this.http.post('http://localhost:3000/autenticacion/cambiarPass',{
+        nuevaPass: newPassword,
+      },
+      { headers: headersClient }
+    );
   }
 
 }

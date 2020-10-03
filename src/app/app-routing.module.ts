@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:"loguear", component: LoginComponent},
   {path:"registrar", component: RegistrarComponent},
   {path:"resetearPassword", component: ResetearPasswordComponent},
-  {path:"cambiarPassword", component: CambiarPasswordComponent},
+  {path:"cambiarPassword/:token", component: CambiarPasswordComponent},
 ];
 
 @NgModule({
