@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,7 @@ import { LandingComponent } from './landing/landing.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { ResetearPasswordComponent } from './resetear-password/resetear-password.component';
 import { CambiarPasswordComponent } from './cambiar-password/cambiar-password.component';
+import { InterceptorsService } from './servicios/interceptors.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,9 @@ import { CambiarPasswordComponent } from './cambiar-password/cambiar-password.co
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorsService, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
