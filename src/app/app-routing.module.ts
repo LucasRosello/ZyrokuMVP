@@ -6,6 +6,7 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
 import { LoginComponent } from './login/login.component';
 import { LandingComponent } from './landing/landing.component';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { ResetearPasswordComponent } from './resetear-password/resetear-password.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:"view/:id", component: ReproductorComponent},
   {path:"loguear", component: LoginComponent},
   {path:"registrar", component: RegistrarComponent},
+  {path:"resetearPassword", component: ResetearPasswordComponent},
 ];
 
 @NgModule({

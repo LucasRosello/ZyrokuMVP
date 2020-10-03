@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { LandingComponent } from './landing/landing.component';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { ResetearPasswordComponent } from './resetear-password/resetear-password.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RegistrarComponent } from './registrar/registrar.component';
     MercadopagoComponent,
     LoginComponent,
     LandingComponent,
-    RegistrarComponent
+    RegistrarComponent,
+    ResetearPasswordComponent
   ],
   imports: [
     BrowserModule,
