@@ -11,8 +11,8 @@ import { CambiarPasswordComponent } from './cambiar-password/cambiar-password.co
 
 
 const routes: Routes = [
-  {path:"", component: InicioComponent},
-  {path:"landing", component: LandingComponent},
+  {path:"inicio", component: InicioComponent},
+  {path:"", component: LandingComponent},
   {path:"stats", component: EstadisticasComponent},
   {path:"view/:id", component: ReproductorComponent},
   {path:"loguear", component: LoginComponent},
